@@ -12,12 +12,12 @@
       rel="stylesheet"
     />
     <!-- Styles -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <div class="header-container">
+        <div class="header__container">
           <nav class="header-nav">
             <a href="./index.html">
               <img src="./imeges/logo.svg" alt="Modern bakery logo" />
@@ -139,6 +139,11 @@
             <ul class="formats-list">
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./imeges/walrus-format.jpg"
+                    alt="walrus format"
+                  />
                   <h3 class="format-title">Walrus</h3>
                   <div class="format-text">
                     <p>Area: up to 120 m2</p>
@@ -153,6 +158,11 @@
               </li>
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./imeges/horseshoe-format.jpg"
+                    alt="horseshoe format"
+                  />
                   <h3 class="format-title">Horseshoe</h3>
                   <div class="format-text">
                     <p>Area: up to 120 m2</p>
@@ -167,6 +177,11 @@
               </li>
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./imeges/handlebar-format.jpg"
+                    alt="Handlabar format"
+                  />
                   <h3 class="format-title">Handlabar</h3>
                   <div class="format-text">
                     <p>Area: up to 120 m2</p>
@@ -180,7 +195,7 @@
                 </article>
               </li>
             </ul>
-            <button class="carousel-button" type="button">
+            <button class="carousel-button next" type="button">
               <svg width="16" height="16">
                 <use href="./imeges/icons.svg#icon-arrowsvg"></use>
               </svg>
@@ -196,7 +211,54 @@
                 Join the bakery network
               </h2>
               <p>Fill out the form so we can contact you!</p>
-              <!-- form -->
+              <form name="contact-form" autocomplete="off">
+                <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-name"
+                    >Name</label
+                  >
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="user-name"
+                    name="user-name"
+                    placeholder="Name"
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-tel"
+                    >Phone number</label
+                  >
+                  <input
+                    class="form-input"
+                    type="tel"
+                    name="user-tel"
+                    id="user-tel"
+                    placeholder="Phone number"
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-email"
+                    >Email</label
+                  >
+                  <input
+                    class="form-input"
+                    type="email"
+                    name="user-email"
+                    id="user-email"
+                    placeholder="Email"
+                  />
+                </div>
+
+                <button class="form-button button" type="submit">
+                  Request a call
+                </button>
+                <p class="form-terms">
+                  By clicking the button I agree to
+                  <a class="form-terms-link" href="#">the privacy policy</a>
+                </p>
+              </form>
             </div>
             <iframe
               class="contact-map"
@@ -276,6 +338,61 @@
     <div class="backdrop">
       <div class="modal">
         <button class="modal-btn-close" type="button">Close</button>
+        <h2>Request a call</h2>
+        <p>Leave a request and our specialist will contact you!</p>
+        <form name="modal-form" autocomplete="off">
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="user-name"
+              >Name</label
+            >
+            <input
+              class="form-input"
+              type="text"
+              id="user-name"
+              name="user-name"
+              placeholder="Name"
+              minlength="2"
+              maxlength="20"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="user-tel"
+              >Phone number</label
+            >
+            <input
+              class="form-input"
+              type="tel"
+              name="user-tel"
+              id="user-tel"
+              placeholder="Phone number"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="user-email"
+              >Email</label
+            >
+            <input
+              class="form-input"
+              type="email"
+              name="user-email"
+              id="user-email"
+              placeholder="Email"
+              required
+            />
+          </div>
+
+          <button class="form-button button" type="submit">
+            Request a call
+          </button>
+          <p class="form-terms">
+            By clicking the button I agree to
+            <a class="form-terms-link" href="#">the privacy policy</a>
+          </p>
+        </form>
       </div>
     </div>
 
